@@ -9,3 +9,4 @@ vim.opt.nrformats:append("alpha") --[[ This defines what bases Vim will consider
                                        respectively ]]
 vim.opt.showtabline = 0
 vim.opt.relativenumber = false
+vim.g.autoformat = false
