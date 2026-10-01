@@ -1,11 +1,12 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    init = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      -- override hover keymap
-      keys[#keys + 1] = { "K", false }
-    end,
+    opts = {
+      servers = {
+        -- override hover keymap
+        ["*"] = { keys = { { "K", false } } },
+      },
+    },
   },
   {
     "nvim-neotest/neotest",

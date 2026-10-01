@@ -11,7 +11,7 @@ return {
     },
   },
   {
-    "lazyvim/lazyVim",
+    "LazyVim/LazyVim",
     opts = { colorscheme = "onedark" },
   },
 }
