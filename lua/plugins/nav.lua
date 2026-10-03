@@ -53,6 +53,25 @@ return {
       { "<leader>o", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
     },
   },
-  { "mrjones2014/smart-splits.nvim" },
-  { "cbochs/portal.nvim" },
+  {
+    "mrjones2014/smart-splits.nvim",
+    -- stylua: ignore
+    keys = {
+      { "<C-h>", function() require("smart-splits").move_cursor_left() end, desc = "Go to Left Window" },
+      { "<C-j>", function() require("smart-splits").move_cursor_down() end, desc = "Go to Lower Window" },
+      { "<C-k>", function() require("smart-splits").move_cursor_up() end, desc = "Go to Upper Window" },
+      { "<C-l>", function() require("smart-splits").move_cursor_right() end, desc = "Go to Right Window" },
+      { "<A-h>", function() require("smart-splits").resize_left() end, desc = "Resize Window Left" },
+      { "<A-j>", function() require("smart-splits").resize_down() end, desc = "Resize Window Down" },
+      { "<A-k>", function() require("smart-splits").resize_up() end, desc = "Resize Window Up" },
+      { "<A-l>", function() require("smart-splits").resize_right() end, desc = "Resize Window Right" },
+    },
+  },
+  {
+    "cbochs/portal.nvim",
+    keys = {
+      { "<leader>[", "<cmd>Portal jumplist backward<cr>", desc = "Portal Jumplist Backward" },
+      { "<leader>]", "<cmd>Portal jumplist forward<cr>", desc = "Portal Jumplist Forward" },
+    },
+  },
 }

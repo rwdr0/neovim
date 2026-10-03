@@ -19,20 +19,8 @@ map("n", "K", "-J", default_opts)
 map("n", "<leader><leader>", "<c-6>", add_desc("Alternate between last 2 buffers"))
 map("n", "<leader>n", ":noh<Return>", add_desc("Remove highlights"))
 
--- Navigation wihin a buffer
-map("n", "<leader>[", "<cmd>Portal jumplist backward<cr>")
-map("n", "<leader>]", "<cmd>Portal jumplist forward<cr>")
-
--- Windows
+-- Windows (smart-splits and portal maps live in lua/plugins/nav.lua)
 delete("n", "<leader>wd") -- q for quitting views (i.e tabs and windows), d for deleting buffers
-map("n", "<C-h>", require("smart-splits").move_cursor_left)
-map("n", "<C-j>", require("smart-splits").move_cursor_down)
-map("n", "<C-k>", require("smart-splits").move_cursor_up)
-map("n", "<C-l>", require("smart-splits").move_cursor_right)
-map("n", "<A-h>", require("smart-splits").resize_left)
-map("n", "<A-j>", require("smart-splits").resize_down)
-map("n", "<A-k>", require("smart-splits").resize_up)
-map("n", "<A-l>", require("smart-splits").resize_right)
 
 -- Tabs
 delete("n", "<leader><tab>[")

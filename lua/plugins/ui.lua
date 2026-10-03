@@ -82,6 +82,9 @@ return {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.icons" },
     ft = { "markdown" },
+    opts = {
+      latex = { enabled = false },
+    },
   },
   {
     "norcalli/nvim-colorizer.lua",

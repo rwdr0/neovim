@@ -8,6 +8,9 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
   },
+  rocks = {
+    enabled = false, -- no plugins require luarocks
+  },
   change_detection = {
     notify = false,
   },

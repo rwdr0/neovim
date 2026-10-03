@@ -10,3 +10,9 @@ vim.opt.nrformats:append("alpha") --[[ This defines what bases Vim will consider
 vim.opt.showtabline = 0
 vim.opt.relativenumber = false
 vim.g.autoformat = false
+
+-- No remote plugins are used, so skip probing for provider hosts
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0

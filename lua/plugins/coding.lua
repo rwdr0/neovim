@@ -10,13 +10,8 @@ return {
   },
   {
     "nvim-neotest/neotest",
-    dependencies = {
-      "fredrikaverpil/neotest-golang",
-      "marilari88/neotest-vitest",
-    },
-    opts = function(_, opts)
-      table.insert(opts.adapters, require("neotest-golang"))
-      table.insert(opts.adapters, require("neotest-vitest"))
-    end,
+    dependencies = { "marilari88/neotest-vitest" },
+    -- neotest-golang is already added by the lang.go extra
+    opts = { adapters = { ["neotest-vitest"] = {} } },
   },
 }
